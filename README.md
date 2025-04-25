@@ -8,6 +8,8 @@ This R script scrapes historical constituents of the **S&P 500**, **S&P 400**, a
 
 It reconstructs the composition of each index month-by-month, working backward from the current date, using both current constituents and historical change tables.
 
+This script is inspired by https://medium.com/@rodrigo.maciel.rubio/web-scraping-historical-s-p-500-constituents-for-quantitative-trading-da29596d10cb.
+
 ---
 
 ## 🔧 How to Use
@@ -33,10 +35,7 @@ The script will:
 
 - Automatically install required packages (`tidyverse`, `rvest`)
 - Create a folder called `SandP1500_data/`
-- Scrape and reconstruct historical index membership data for:
-  - S&P 500 (since 1990)
-  - S&P 400 (since 1991)
-  - S&P 600 (since 1994)
+- Scrape and reconstruct historical index membership data for S&P 500, S&P 400 and S&P 600
 - Save separate CSV files for each index
 - Combine all into a master dataset:
   - `SandP1500_data_year_ticker_wikipedia.csv`
