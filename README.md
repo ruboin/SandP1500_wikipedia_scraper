@@ -7,7 +7,6 @@ This R script scrapes historical constituents of the **S&P 500**, **S&P 400**, a
 - [S&P 600](https://en.wikipedia.org/wiki/List_of_S%26P_600_companies)  
 
 It reconstructs the composition of each index month-by-month, working backward from the current date, using both current constituents and historical change tables.
-
 This script is inspired by https://medium.com/@rodrigo.maciel.rubio/web-scraping-historical-s-p-500-constituents-for-quantitative-trading-da29596d10cb.
 
 ---
@@ -22,7 +21,7 @@ If you haven't already, install R from [CRAN](https://cran.r-project.org/) and o
 
 ### 2. Set the time range
 
-Open the script and set the range of years you're interested in. These are the only two lines you need to edit:
+Download and open the script (Wikipedia SandP 1500 scraping.R) and set the range of years you're interested in. These are the only two lines you need to edit:
 
 ```r
 from_year <- 2000  # Change to your desired starting year
@@ -60,13 +59,3 @@ Each row represents a stock’s membership in a given year, along with the index
 - The script works **backwards** in time using the change logs on Wikipedia.
 - The output is cleaned and deduplicated by `year` and `ticker`.
 - Wikipedia pages may change structure in the future; if errors appear, verify the relevant table nodes still exist on the page.
-
----
-
-## 📌 Example Use Case
-
-Want to analyze index changes over time? This script can help you:
-
-- Reconstruct historical index portfolios
-- Study turnover or survival of companies
-- Analyze performance of entrants/exits over the years
